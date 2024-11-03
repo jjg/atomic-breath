@@ -9,11 +9,23 @@ DRIVER_DIAMETER = 90;
 TOLERANCE = 1;
 WALL_THICKNESS = 3;
 
-//difference(){
+// TODO: Mounting flange
+// TODO: bushing cut-out
+// TODO: smoke manifold
+// TODO: LED mount(s)
+
+difference(){
     // outer wall
     cylinder(
         r1=(DRIVER_DIAMETER/2)+WALL_THICKNESS,
         r2=((DRIVER_DIAMETER*.75)/2)+WALL_THICKNESS,
         h=DRIVER_DIAMETER*1.5
     );
+    
+    cylinder(
+        r1=(DRIVER_DIAMETER/2),
+        r2=((DRIVER_DIAMETER*.75)/2),
+        h=DRIVER_DIAMETER*1.5
+    );
+}
     
